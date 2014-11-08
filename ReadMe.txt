@@ -25,28 +25,25 @@ The few extra things you should do over a standard install is
 * Change the password from the default password for extra security. 
 * I also recommend doing minor overclocking to 800Mhz.
 * Don’t forget to enable SSH during setup
-* I recommend changing the memory split from 64 to only 32Meg for the video as you are not going to watch video on this so give more memory to the CPU
+* I recommend changing the memory split from 64 to only 32Meg for the video to give more memory to the CPU
 * Don’t forget to select your timezone
 * Consider changing the hostname if you already have more than one Pi on your network
 
-
-
-
 Set up Rasbian as per the instructions from the Raspberry Pi website and SSH into the Pi
+Note as configured this script will download a precompiled version of feathercoind to save you 4 hours of compiling,
+if you want to compile it yourself uncommoment thats ection of the script and comment out the bit that downlaods the precompiled one. 
 
+To Download everything off github onto your Pi use the following command
 
-Now we need to download the install script (Remember you can paste into the terminal window by right clicking in the window after selecting copy from this page)
-enter 
+sudo git clone https://github.com/tmuir12/FTC_Raspberry_Pi_Full_Node
 
+Now enter the directory FTC_Raspberry_Pi_Full_Node
 
-wget https://www.dropbox.com/s/4eqecop7f35qvw9/feathercoind_node_precompiled.sh
-
+cd FTC_Raspberry_Pi_Full_Node/
 
 We now need to make the script executable by typing
 
-
-chmod 755 feathercoind_node_precompiled.sh
-
+sudo chmod 755 feathercoind_node_precompiled.sh
 
 Now we need to start the install script by typing.
 ./feathercoind_node_precompiled.sh
@@ -61,13 +58,10 @@ This will
 * Download a fairly recent blockchain and chainstate to speed up the process of getting it running
 * create an /etc/init.d entry to start feathercoind as using ‘pi’ at boot
 
-
 You are now on the home stretch.
-
 
 You now need to log into your router and statically assign the IP address to the Pi and enable port forwarding to this IP address both inbound and outbound on port 9336.
 You will need to read your router's manual to find out how to do this.
-
 
 Once you have set up your router its time to test it.
 Type sudo reboot
@@ -106,6 +100,4 @@ Whilst it is catching up it will use about 90% of the CPU but once it has caught
 Once you have been online for a day or so you should be able to find your node here
 https://bitinfocharts.com/feathercoin/nodes/
 
-
-If you get it running post on this thread to let us now.
 You can also look at installing apache mysql and PHP and install a web front end to let you see what is happening by your web browser if you want, but don't forget to open up port 80 on the Pis firewall if you do.
