@@ -101,9 +101,10 @@ echo "listen=1" >> ~/.feathercoin/feathercoin.conf
 echo "server=1" >> ~/.feathercoin/feathercoin.conf
 echo "maxconnections=100" >> ~/.feathercoin/feathercoin.conf
 
-echo downloading feathercoind start scrypt for initd
-cd /etc/init.d 
-sudo wget https://www.dropbox.com/s/y60ngip92thcrdh/feathercoin
+echo moving start script for fetahercoind to /etc/init.d
+sudo mv feathercoin /etc/init.d
+cd /etc/init.d
+sudo chmod 755 feathercoin
 sudo chmod 755 feathercoin
 
 sudo update-rc.d feathercoin defaults
