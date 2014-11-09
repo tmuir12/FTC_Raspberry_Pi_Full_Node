@@ -1,5 +1,4 @@
 echo This script transforms your raspbian installation to a working feathercoin client.
-echo Make sure you have a backup of any files you need.
 echo Feathercoind will be installed in /usr/local/bin/
 echo The blockchain, chainstate and conf files will be installed in /home/pi/.feathercoin
 echo press enter to continue, or ctrl c to quit...
@@ -12,11 +11,6 @@ echo updating software...
 echo
 sudo apt-get -y update
 sudo apt-get -y upgrade
-echo
-echo installing necessary applications...
-echo
-sudo apt-get -y install keyboard-configuration 
-
 echo
 echo installing ufw firewall...
 echo
@@ -56,6 +50,8 @@ sudo wget https://www.dropbox.com/s/ysnlchtvk9er4wl/feathercoind
 sudo chmod 755 feathercoind
 #######################################################
 
+cd /home/pi
+mkdir .feathercoin
 
 #############################################################
 #If you comment out the section above uncomment this section to download the source and compile yourself
@@ -69,8 +65,6 @@ sudo chmod 755 feathercoind
 #echo compiling... this takes about 4 hours...
 #echo
 #sudo make -f makefile.unix USE_UPNP= feathercoind
-#cd /home/pi
-#mkdir .feathercoin
 #sudo cp -f /home/pi/Feathercoin/src/feathercoind /usr/local/bin
 #
 #echo
@@ -80,8 +74,7 @@ sudo chmod 755 feathercoind
 ##############################################################
 
 
-cd /home/pi
-mkdir .feathercoin
+
 echo
 echo Setting up feathercoind conf file
 echo
