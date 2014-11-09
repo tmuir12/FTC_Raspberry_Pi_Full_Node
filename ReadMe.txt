@@ -4,7 +4,7 @@
 This instruction is to create a Feathercoin full node on a raspberry Pi.
 You will need the following things before we start
 * Raspberry Pi Model B, or B+
-* Minimum 8Gb class 10SD card, but I recommend a 16Gb
+* Minimum 8Gb class 10SD card, but I recommend a 16Gb Note: You may even get away with a 4GB card but I recommend against it
 * Monitor, keyboard and mouse to plug into the Pi for Initial setup (Not needed after setup is complete
 * You need to read up on your router and find out how to make it statically assign an IP address to the Raspberry Pi and how to set up port forwarding on it for both inbound and outbound traffic on port 9336
 * You need to be able to SSH from your main computer to the PI to check it. If you have never down this before you will need to download and install Putty from here http://www.putty.org/
