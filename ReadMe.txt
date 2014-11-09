@@ -29,9 +29,9 @@ The few extra things you should do over a standard install is
 * Don’t forget to select your timezone
 * Consider changing the hostname if you already have more than one Pi on your network
 
-Set up Rasbian as per the instructions from the Raspberry Pi website and SSH into the Pi
+Set up Rasbian as per the instructions from the Raspberry Pi website and SSH into the Pi.
 Note as configured this script will download a precompiled version of feathercoind to save you 4 hours of compiling,
-if you want to compile it yourself uncommoment thats ection of the script and comment out the bit that downlaods the precompiled one. 
+if you want to compile it yourself uncommoment that section of the script and comment out the bit that downlaods the precompiled one. 
 
 To Download everything off github onto your Pi use the following command
 
