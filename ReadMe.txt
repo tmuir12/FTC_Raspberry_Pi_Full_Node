@@ -101,3 +101,16 @@ Once you have been online for a day or so you should be able to find your node h
 https://bitinfocharts.com/feathercoin/nodes/
 
 You can also look at installing apache mysql and PHP and install a web front end to let you see what is happening by your web browser if you want, but don't forget to open up port 80 on the Pis firewall if you do.
+
+
+Troubleshooting
+If after rebooting feathercoind doesn't appear to be running try the command
+
+sudo /etc/init.d/feathercoin start
+
+You will be prompted for user pi password deatils before it will start and if it doesn't start will give you an error message
+explaining why.
+
+It is possible that in unzipping the blockchain it could of corrupted the data if this has happend just chose yes to let it rebuild the blockchain. 
+This will take a long time though, posibbly over 24 hours if it needs to download the whole blockchain again
+
