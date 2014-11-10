@@ -109,8 +109,8 @@ echo press enter to continue, or ctrl c to quit...
 read whatever
 
 sudo wget https://www.dropbox.com/s/tkm5ca09zvmod4n/blockchain.zip
-sudo unzip blockchain.zip
-sudo rm blockchain.zip
+unzip blockchain.zip
+rm blockchain.zip
 
 echo thats you all set up just sudo reboot to restart your pi, give it a few minutes after booting for the featehrcoind daemon to start up and your off and running
 
