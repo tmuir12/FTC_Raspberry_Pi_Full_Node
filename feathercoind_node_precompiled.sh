@@ -95,7 +95,7 @@ echo "server=1" >> ~/.feathercoin/feathercoin.conf
 echo "maxconnections=100" >> ~/.feathercoin/feathercoin.conf
 
 echo moving start script for feathercoind to /etc/init.d
-sudo mv feathercoin /etc/init.d
+sudo mv /home/pi/FTC_Raspberry_Pi_Full_Node/feathercoin /etc/init.d
 cd /etc/init.d
 sudo chmod 755 feathercoin
 sudo chmod 755 feathercoin
