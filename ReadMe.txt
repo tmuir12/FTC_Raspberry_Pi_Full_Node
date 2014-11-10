@@ -69,8 +69,8 @@ Once the Pi has booted back up SSH back into it
 Give it 2 or 3 minutes for the Feathercoin daemon to start up and then to check it go
 
 
-cd .feathercoin
-./feathercoind getinfo
+feathercoind getinfo
+
 and you should be presented something like this
 
 
