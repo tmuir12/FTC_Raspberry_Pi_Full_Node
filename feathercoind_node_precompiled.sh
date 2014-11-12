@@ -30,7 +30,7 @@ echo configuring ufw...
 echo Opening up Port 22 TCP for SSH
 sudo ufw allow 22/tcp
 echo opening up Port 9336 for Feathercoin
-sudo ufw allow 9336
+sudo ufw allow 9336/tcp
 sudo ufw status verbose
 sudo ufw --force enable
 
